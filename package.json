@@ -1,0 +1,25 @@
+{
+  "name": "aufgabenstellung6",
+  "version": "1.0.0",
+  "description": "Example",
+  "main": "demoserver.js",
+  "scripts": {
+    "test": "node node_cli_demo.js",
+    "start": "node demoserver.js"
+  },
+  "keywords": [
+    "\"keyword",
+    "1\"",
+    "\"keyword",
+    "2\"",
+    "\"node",
+    "js\"",
+    "\"live",
+    "demo\""
+  ],
+  "author": "TT",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
