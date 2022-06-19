@@ -1,2 +1,2 @@
 # Aufgabenstellung-6
-Authors: Tim Lehmann und Tobias Krumrein moin
+Authors: Tim Lehmann und Tobias Krumrein
