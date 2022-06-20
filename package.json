@@ -10,7 +10,14 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+<<<<<<< HEAD
+    "mongodb": "^4.7.0",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.16",
+    "pug": "^3.0.2"
+=======
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11"
+>>>>>>> 7ab812c00b7c1c526d1f5d7e7fd74f0ef08b2cfa
   }
 }
