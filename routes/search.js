@@ -4,8 +4,8 @@ const { MongoClient } = require('mongodb')
 
 const url = 'mongodb://localhost:27017' // connection URL
 const client = new MongoClient(url) // mongodb client
-const dbName = 'mydatabase' // base name
-const collectionName = 'pois' // collection name
+const dbName = 'mydatabase' // database name
+const collectionName = 'newpois' // collection name
 
 
 /* define the search route : retrieve all elements from the database and use it as input for autocomplete */
@@ -33,6 +33,8 @@ async function retrieveAllPOIsfromDB(client, dbName, collectionName, res)
   const cursor =  collection.find({})
    
   const results = await cursor.toArray()
+
+  
 
   // get the geojson object (because toArray has generated an array)
   console.log(results[0])

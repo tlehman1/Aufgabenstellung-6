@@ -22,9 +22,7 @@ router.post('/newpoi', function(req, res, next)
 
   let poi = {}
   poi.poiname = req.body.pname
-  poi.cityname = req.body.cname
   poi.coordinates = req.body.longlat
-  poi.link = req.body.picurl
 
   addNewPOItoDB(client, dbName, collectionName, poi, res)
 
@@ -47,8 +45,10 @@ async function addNewPOItoDB(client, dbName, collectionName, poi, res)
   collection.insertOne(poi) // see https://www.mongodb.com/docs/drivers/node/current/usage-examples/insertOne/
   console.log("New poi inserted in the database");
 
+
+
   // pass the data added as input for the notification page
-  res.render('add_notification', {title: "Addition Completed", newpoi: poi})
+  res.render('add_notification', {title: "Addition Completed", newpoi: poi, data: []})
 
 }
 

@@ -11,11 +11,24 @@ block content
         button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
   
-  h3 Welcome to the #{title}
-  br 
-  p Type /search to display the created POIs 
-  p Type /add to add new elements to the databank 
-  p Type /delete to delete elements from the databank
+  .container
+    .row 
+      .col.justify-content-md-center
+        form(action="/delete/deletedPoi" method="post")
+          fieldset 
+            label.col-sm-2.col-form-label(for="poiname") Enter POI Name to delete
+              .col-sm-6
+                input(type="text" name="pname" placeholder="Enter POI Name")
+            br
+            button.btn.btn-primary.mb-2(type="delete") Delete 
+        br
+        br
+        p Type /home to get to the Homepage again 
+        p Type /search to display the created POIs 
+        p Type /add to add new elements to the databank 
+      .col 
+        p(name="elements") 
+
 
 block foot 
   footer

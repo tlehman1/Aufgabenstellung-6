@@ -1,5 +1,12 @@
 extends layout
 
+block scripts
+  script.
+    let geojson = !{JSON.stringify(data)}
+  // Loading the API Keys (Mapbox and Here)
+  //script(src="/javascripts/apiKeys.js")
+  script(src="/javascripts/map06.js")
+
 block content
   header
     // add a bootstrap navbar
@@ -11,9 +18,7 @@ block content
       button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
 
-  h3 Welcome to the #{title}
-  br
-  br 
+  
   // adapter from https://getbootstrap.com/docs/4.0/components/forms/#horizontal-form
   .container
     .row.justify-content-md-center
@@ -24,21 +29,22 @@ block content
             .col-sm-6
               input#poiname.form-control(type="text" name="pname" placeholder="Enter POI Name")
           .form-group.row.mb-1
-            label.col-sm-2.col-form-label(for="cityname") City Name
-            .col-sm-6
-              input#cityname.form-control(type="text" name="cname" placeholder="Enter City Name")
-          .form-group.row.mb-1
             label.col-sm-2.col-form-label(for="coordinates") Coordinates
             .col-sm-6
               input#coordinates.form-control(type="text" aria-describedby="coordinatesHelp" name="longlat" placeholder="Enter Coordinates")
-              small#coordinatesHelp.form-text.text-muted Coordinates should follow the long/lat order.
-          .form-group.row.mb-1
-            label.col-sm-2.col-form-label(for="picturelink") Link
-            .col-sm-6
-              input#picturelink.form-control(type="url" name="picurl" placeholder="Enter link to the picture")
+              small#coordinatesHelp.form-text.text-muted Coordinates should have the format: [long/lat]
           button.btn.btn-primary.mb-2(type="submit") Send
+    .row
+      #myfirstmap
+    .row  
+        p Type /home to get to the Homepage again 
+    .row
+      p Type /search to display the created POIs  
+    .row 
+      p Type /delete to delete elements from the databank 
+
 
 block foot 
   footer
   .navbar.navbar-expand-md.fixed-bottom.bg-primary.justify-content-center
-    span.text-white This is a simple example of footer.
+    span.text-white Assignment 6 by Tim Lehmann & Tobias Krumrein

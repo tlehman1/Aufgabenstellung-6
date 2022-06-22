@@ -106,7 +106,6 @@ window.onload = function () {
    */
 
   // create a variable for the map
-  console.log("loaded?")
   let mymap = L.map('myfirstmap',
     {
       center: [51.961563, 7.628202],
@@ -115,13 +114,18 @@ window.onload = function () {
 
 
   // add the base map
-  L.tileLayer(`https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`, {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
   }).addTo(mymap)
+
+    // Marker setzen 51.96892984006318, 7.595957198328288
+    //L.marker([51.96892984006318, 7.595957198328288]).addTo(mymap)
+    //.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    //.openPopup();
 
   // retrieve the pictures
   let pictures = geojson.features

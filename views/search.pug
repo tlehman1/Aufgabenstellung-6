@@ -5,7 +5,7 @@ block scripts
   script.
     let geojson = !{JSON.stringify(data)}
   // Loading the API Keys (Mapbox and Here)
-  script(src="/javascripts/apiKeys.js")
+  //script(src="/javascripts/apiKeys.js")
   script(src="/javascripts/map06.js")
 
 block content
@@ -33,20 +33,21 @@ block content
           label(for="color_selector") Pick a color
           input(type="color" id="color_selector" title="Choose your color")
       .row.mb-5
-        // first column: add an information card from bootstrap
-        .col
-          #information.card
-            .card-body
-              h5.card-title Card title
-              h6.card-subtitle.mb-2.text-muted Card subtitle
-              p.card-text Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-              a.card-link(href="#") Card link
+
         // second column: div to show the map
         .col
           // Div to show the map
           #myfirstmap
+      .row  
+        p Type /home to get to the Homepage again  
+      .row
+        p Type /add to add new elements to the databank 
+      .row 
+        p Type /delete to delete elements from the databank 
+
+ 
 
 block foot 
   footer
   .navbar.navbar-expand-md.fixed-bottom.bg-primary.justify-content-center
-    span.text-white This is a simple example of footer.
+    span.text-white Assignment 6 by Tim Lehmann & Tobias Krumrein
